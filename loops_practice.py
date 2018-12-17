@@ -294,17 +294,17 @@ for x in range(len(table)):
    #           #      #       #      # #       # #
    # # # # # # #    # # # # # # #    # # # # # # #
 '''
-table = [[]*8 for x in range(8)]
+table = [[" "]*8 for x in range(8)]
 for x in range(8):
   for y in range(8):
     if x == 0 or x == 7 or y == 0 or y == 7:
       table[y][x] = "#"
-table = [[]*8 for x in range(8)]
+table = [[" "]*8 for x in range(8)]
 for x in range(8):
   for y in range(8):
     if y == 0 or y == 7 or x-y == 0 or x-y == 7:
       table[y][x] = "#"
-table = [[]*8 for x in range(8)]
+table = [[" "]*8 for x in range(8)]
 for x in range(8):
   for y in range(8):
     if x == 0 or x == 7 or y == 0 or y == 7 or x-y == 0 or x-y == 7:
