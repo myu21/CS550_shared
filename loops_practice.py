@@ -294,14 +294,28 @@ for x in range(len(table)):
    #           #      #       #      # #       # #
    # # # # # # #    # # # # # # #    # # # # # # #
 '''
- 
+table = [[]*8 for x in range(8)]
+for x in range(8):
+  for y in range(8):
+    if x == 0 or x == 7 or y == 0 or y == 7:
+      table[y][x] = "#"
+table = [[]*8 for x in range(8)]
+for x in range(8):
+  for y in range(8):
+    if y == 0 or y == 7 or x-y == 0 or x-y == 7:
+      table[y][x] = "#"
+table = [[]*8 for x in range(8)]
+for x in range(8):
+  for y in range(8):
+    if x == 0 or x == 7 or y == 0 or y == 7 or x-y == 0 or x-y == 7:
+      table[y][x] = "#"
   
  
 ''' 25. 
    Write code that will extract each digit from an int, in the reverse order. For example, if the int is 15423, the output shall be "3 2 4 5 1", with a space separating the digits.
    Hint: Use n % 10 to extract the least-significant digit; and n = n / 10 to discard the least-significant digit.
 '''
-extract = str(1234)
+extract = str(15423)
 new = []
 for x in range(len(extract)):
   new.append(len(extract)-x)
